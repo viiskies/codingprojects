@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html {
+	width: 100%;
+	padding:0;
+}
+
+
+body {
+	width: 100%;
+	padding:0;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.topbar {
+	width: 100%;
+	height: 20px;
+	color: green;
+	padding:0;
+}
+
+.topbarleft {
+	text-align:left;
+}
+
+.topbarright {
+	float:right;
+}
+
+.topbarsocial {
+	border:1px solid green;
+	margin-right:20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+li:before {    
+font-family: 'FontAwesome';
+content: '\f061';
+margin:0 5px 0 -15px;
+}
+
+.header {
+	height:250px;
+	width:100%;
+	background-image: url(http://localhost/Projektas%201/images/header.jpg);
+}
+
+.lietuva {
+	padding-top:100px;
+	padding-left:100px;
+	min-width:15%;
+}
+
+.veleva {
+	min-width:15%;
+	margin-top: 50px;
+	animation-name: judam;
+	animation-duration: 1s;
+	animation-iteration-count: 99999;
+}
+
+@keyframes judam {
+    0%   {padding-left: 0px}
+    25%  {padding-left: 20px}
+    50%  {padding-right: 10px}
+    100% {padding-right: 0px}
+}
+
+.veleva1 {
+
+	width:300px;
+	height:50px;
+	background-color: yellow;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.veleva2 {
+
+	width:300px;
+	height:50px;
+	background-color: green;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.veleva3 {
+
+	width:300px;
+	height:50px;
+	background-color: red;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.wrap {
+}
+
+.content {
+	padding-bottom: 50px;
+	width:80%;
+	min-height: 400px;
+	margin:0 auto;
+	background-color: rgba(255,255,255, 0.6);
+}
+
+.titleh2 {
+	padding:40px;
+}
+
+p{
+	text-align: justify;
+}
+
+.text1 img {
+	display:inline;
+	float:right;
+	padding:30px;
+	border:1px solid green;
+	margin-left:30px;
+}
+
+.text1 {
+	padding-left:30px;
+	padding-right:30px;
+}
+
+.wrap {
+	background-image: url(http://localhost/Projektas%201/images/background.png);
+	background-repeat: repeat;
+}
+
+.miestai {
+	padding-left:100px;
+	padding-top:100px;
+}
+
+.statistika {
+	padding-left:100px;
+	padding-top:100px;
+}
+
+.content2 {
+	display: inline-block;
+	width:100%;
+}
+
+ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+
+ol {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+
+.imagewrap {
+margin:0 auto;
+width:100%;
+margin-top:50px;
+margin-bottom:50px;
+}
+
+.footerimage {
+background-image: url(../images/2.jpg); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 400px;
+  min-width: 200px;
+  margin-top:5px;
+}
+
+
+.footer {
+	background-color: green;
+	color:white;
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.logos {
+background-image: url(../images/2.jpg); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 120px;
+  margin:15px;
+  min-width: 150px;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+.lietuva {
+	padding-top:30px;
+	padding-left:0px;
+	margin-bottom: 10px;
+	float:none;
+	width:100%;
+	text-align: center;
+}
+
+.header { overflow: hidden; height:auto; }
+
+.content { 
+
+	width:100%; 
+}
+
+.wrap {
+	width:100%; 
+	padding-right: 0px;
+padding-left: 0px;
+}
+
+.footerimage {
+background-image: url(../images/2.jpg); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 200px;
+  min-width: 200px;
+}
+.veleva {
+	width: 300px;
+	clear:both;
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	float:none;
+	margin-top: 0px;
+	padding-top:10px;
+	margin-bottom: 30px
+}
+
+.onelogos img {
+	width:100%;
+}
+
+.text1 img {
+	float:none;
+	width:150px;
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.logos { 
+padding-left:0px;
+margin-left: 0px;
+}
+
+.statistika h3 { text-align: left; }
+
+.statistika1col {
+	min-width:250px;
+}
+
+.miestai {
+	padding-left:50px;
+	padding-top:50px;
+	display: inline-block;
+}
+
+.statistika {
+	padding-left:50px;
+	padding-top:50px;
+}
+
+.veleva1 {
+
+	width:100px;
+	height:30px;
+	background-color: yellow;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px
+}
+
+.veleva2 {
+
+	width:100px;
+	height:30px;
+	background-color: green;
+}
+
+.veleva3 {
+
+	width:100px;
+	height:30px;
+	background-color: red;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+}
