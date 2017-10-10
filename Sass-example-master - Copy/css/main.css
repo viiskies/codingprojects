@@ -1,0 +1,108 @@
+/* line 10, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+body {
+  background-color: #FFDAA9;
+  color: white;
+}
+
+/* line 1, C:/Users/husho/Desktop/Sass-example-master/scss/_header.scss */
+.header {
+  padding: 40px;
+}
+
+/* line 3, C:/Users/husho/Desktop/Sass-example-master/scss/_header.scss */
+.header img {
+  max-height: 200px;
+  max-width: 100%;
+}
+
+/* line 7, C:/Users/husho/Desktop/Sass-example-master/scss/_header.scss */
+.header h1 {
+  font-size: 4vw;
+}
+
+/* line 25, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.content .row {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #FFDAA9;
+  padding: 40px;
+}
+
+/* line 39, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.banner-1 {
+  padding: 10px;
+  background-color: #7e4791;
+  color: #cccccc;
+  margin: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* line 39, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.banner-2 {
+  padding: 10px;
+  background-color: #995caf;
+  color: #999999;
+  margin: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* line 39, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.banner-3 {
+  padding: 10px;
+  background-color: #af7ec0;
+  color: #666666;
+  margin: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* line 39, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.banner-4 {
+  padding: 10px;
+  background-color: #c4a0d1;
+  color: #333333;
+  margin: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* line 50, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+#real {
+  font-size: 40px;
+  color: #5F72B2;
+}
+
+/* line 58, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.link {
+  margin-top: 5px;
+  display: block;
+  background-color: #6FA3A9;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+}
+
+/* line 67, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.link:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #56898f;
+}
+
+/* line 72, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.link:selected {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 76, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=../css/main.map */

@@ -1,0 +1,53 @@
+.sandy-color {
+	background-color: #907c57;
+}
+
+.grey-color {
+	background-color: #423d37;
+}
+
+.lightgrey-color {
+	background-color: #958f83;
+}
+
+.container-fluid>* {
+	height: calc(88vh/3);
+}
+
+.progress {
+	height: 10vh;
+}
+
+.gradient {
+	height: 2vh;
+}
+
+@for $i from 1 through 10 {
+	#block-#{$i} {
+		background-color: darken(#fff, 10 * $i);
+	}
+}
+
+.fa i{
+	height: 50px;
+	width: 50px;
+}
+
+.bg-bg-bg {
+	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/swirl_pattern.png");
+}
+// // Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575px) { }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767px) {  }
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) and (max-width: 991px) { }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199px) { }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+

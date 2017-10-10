@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.main-content {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.header {
+    background-color: green;
+}
+
+
+.lietuva h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.below-topbar {
+    background: rgba(0,0,0,0.8);
+}
+
+
+/* The animation code */
+@keyframes example {
+    0% {background-color: yellow;}
+    33% {background-color: green;}
+    66% {background-color: red;}
+    100% {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+.header {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 50px;
+}
+
+.card {
+    color: black;
+}
+
+.header ul {
+    list-style-type: none;
+}
+
+@media (min-width: 576px) {
+
+    .card {
+        height: 100%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .main-image {
+        width: 40%;
+        float: right;
+        padding-top: 0px !important;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 992px) { 
+/*    .number-ones img {
+        width: 10%;
+    }
+    */
+
+}
+
+/*@media (min-width: 1200px) { ... }*/

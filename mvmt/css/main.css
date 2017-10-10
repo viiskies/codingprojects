@@ -1,0 +1,1 @@
+@keyframes example{0%{left:0vh;top:0vh}25%{left:50vh;top:0vh}50%{left:50vh;top:50vh}75%{left:0vh;top:50vh}100%{left:0vh;top:0vh}}.card{animation-timing-function:linear;position:absolute;animation-name:example;animation-duration:4s;animation-iteration-count:infinite}

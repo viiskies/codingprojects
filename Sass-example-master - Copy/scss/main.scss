@@ -1,0 +1,80 @@
+
+// variables
+
+$pink:  #FFDAA9;
+$dark-pink: #6FA3A9; 
+$green: #60366F;
+$dark-green: #5F72B2;
+$border-radius: 15px;
+
+body{
+	background-color: $pink;
+	color: white;
+}
+
+
+// partials 
+
+@import "header";
+
+
+
+// nesting
+
+.content {
+	.row {
+		border-radius: $border-radius;
+		margin-bottom: 20px;
+		background-color: white;
+		color: $pink;
+		padding: 40px;	
+	}
+}
+
+
+// loops
+
+$bannerCount: 4;
+@for $i from 1 through $bannerCount {
+  .banner-#{$i} {
+  	padding: 10px;
+	background-color: lighten($green, 10% * $i);
+	color: darken(white, 20% * $i);
+	margin: 5px;
+	border-radius: $border-radius;	
+	text-align: center;
+  }
+	
+}
+
+#real {
+	font-size: 40px;
+	color: $dark-green;
+}
+
+
+
+
+.link {
+	margin-top: 5px;
+	display: block;
+	background-color: $dark-pink;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 15px;
+	//@include border-radius($border-radius);
+	&:hover {
+		text-decoration: none;
+		color: white;
+		background-color: darken($dark-pink, 10%); //making things darker or 
+	}
+	&:selected {
+		text-decoration: none;
+		color: white;
+	}
+	&:visited {
+		text-decoration: none;
+		color: white;
+	}
+}

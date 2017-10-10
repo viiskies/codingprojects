@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss"
+	],
+	"sourcesContent": [
+		"$black : #3b3b3b;\r\n$green : #3fe5c0;\r\n$light-grey : #fafafa;\r\n$grey : #ededed;\r\n\r\n// // Extra small devices (portrait phones, less than 576px)\r\n// @media (max-width: 575px) { }\r\n\r\n// // Small devices (landscape phones, 576px and up)\r\n// @media (min-width: 576px) and (max-width: 767px) {  }\r\n\r\n// Medium devices (tablets, 768px and up)\r\n//@media (min-width: 768px) and (max-width: 991px) { }\r\n\r\n// // Large devices (desktops, 992px and up)\r\n// @media (min-width: 992px) and (max-width: 1199px) { }\r\n\r\n// // Extra large devices (large desktops, 1200px and up)\r\n// @media (min-width: 1200px) {  }\r\n\r\n"
+	],
+	"mappings": "",
+	"names": []
+}

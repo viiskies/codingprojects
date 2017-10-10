@@ -1,0 +1,43 @@
+$black : #3b3b3b;
+$green : #3fe5c0;
+$light-grey : #fafafa;
+$grey : #ededed;
+
+// // Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575px) { }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767px) {  }
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) and (max-width: 991px) { }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199px) { }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+
+/* The animation code */
+@keyframes example {
+ 	0%   {left:0vh; top:0vh;}
+    25%  {left:50vh; top:0vh;}
+    50%  {left:50vh; top:50vh;}
+    75%  {left:0vh; top:50vh;}
+    100% {left:0vh; top:0vh;}
+}
+
+/* The element to apply the animation to */
+.card {
+	animation-timing-function: linear;
+	position: absolute;
+    // background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+// body {
+// 	background-color: red !important;
+// }

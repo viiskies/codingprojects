@@ -1,0 +1,10 @@
+.header {
+	padding: 40px;
+	img {
+		max-height: 200px;
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 4vw; // relative to width
+	}
+}

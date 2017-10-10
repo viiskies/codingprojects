@@ -1,0 +1,23 @@
+.sandy-color {
+	background-color: #907c57;
+}
+
+.grey-color {
+	background-color: #423d37;
+}
+
+.lightgrey-color {
+	background-color: #958f83;
+}
+
+.container-fluid>* {
+	height: calc(88vh/3);
+}
+
+.progress {
+	height: 10vh;
+}
+
+.gradient {
+	height:2vh;
+}

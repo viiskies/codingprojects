@@ -1,0 +1,29 @@
+/* line 13, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.nav-link.active a, .nav-pills {
+  background-color: #3fe5c0 !important;
+}
+
+/* line 17, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.nav-item a {
+  color: #3fe5c0;
+}
+
+/* line 21, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.bg-success, .btn-success {
+  background-color: #3fe5c0 !important;
+  border: none;
+}
+
+/* line 26, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+.navbar-toggler-icon {
+  fill: red !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 30, C:/Users/husho/Desktop/Sass-example-master/scss/main.scss */
+  .nav-item a {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=../css/main.map */
