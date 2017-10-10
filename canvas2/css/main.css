@@ -1,0 +1,11 @@
+html, body {
+    overflow: hidden;
+}
+
+body {
+	background-color: grey;
+}
+
+#myCanvas {
+	background-color: white;
+}
