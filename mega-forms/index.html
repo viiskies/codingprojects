@@ -18,7 +18,7 @@
 		<div class="row">
 			<div class="form-check form-group">
 				<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" value="" id="vegan">
+					<input class="form-check-input" type="checkbox" value="" id="vegan">
 					<h2>Vegetarian</h2>
 				</label>
 			</div>
@@ -61,9 +61,53 @@
 						<option veg="false">Chicken</option>
 						<option veg="true">Ramen</option>
 						<option veg="true">Cold Borsch</option>
+					</select>
+				</div>
+
+			</div>
+
+		</div>			
+		
+		<div class="row m-3">
+			<div class="col">
+				<div class="form-check form-group">
+					<label class="form-check-label form-group">
+						<input class="form-check-input" type="checkbox" value="" id="halal">
+						<h2>Halal</h2>
+					</label>					
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" value="" id="koser">
+						<h2>Kosher</h2>
+					</label>					
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" value="" id="gluten">
+						<h2>Gluten</h2>
+					</label>
+				</div>
+			</div>
+			<div class="col">
+
+				<div class="form-group col" >
+					<select  class="form-control" id="3way-opt">
+						<option></option>
+						<option koser="true" halal="true" gluten="true">HKG</option>
+						<option koser="true" halal="false" gluten="false">K</option>
+						<option koser="true" halal="true" gluten="true">HKG</option>
+						<option koser="true" halal="true" gluten="false">HK</option>
+						<option koser="false" halal="false" gluten="true">G</option>
+						<option koser="true" halal="false" gluten="false">K</option>
+						<option koser="true" halal="false" gluten="true">KG</option>
+						<option koser="false" halal="true" gluten="true">HG</option>
+						<option koser="true" halal="true" gluten="false">KH</option>
+						<option koser="false" halal="true" gluten="false">H</option>
 
 					</select>
 				</div>
+
+			</div>			
+			<div class="col">
+
+
 
 			</div>
 

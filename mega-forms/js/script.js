@@ -63,3 +63,65 @@ vegan.addEventListener("change", function() {
 	}
 
 })
+
+
+var cb_halal = document.getElementById("halal");
+var cb_koser = document.getElementById("koser");
+var cb_gluten = document.getElementById("gluten");
+
+// cb_halal.checked = true;
+// cb_koser.checked = true;
+// cb_gluten.checked = true;
+
+var select_3way_opt = document.getElementById("3way-opt");
+
+
+cb_halal.addEventListener("change", function() {
+
+	if (cb_halal.checked) {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			if (select_3way_opt.options[i].getAttribute("halal") == "false") {
+				select_3way_opt.options[i].style.display = 'none';
+			} 
+		}
+
+	} else {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			select_3way_opt.options[i].style.display = 'block';
+		}
+	}
+
+})
+
+cb_koser.addEventListener("change", function() {
+
+	if (cb_koser.checked) {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			if (select_3way_opt.options[i].getAttribute("koser") == "false") {
+				select_3way_opt.options[i].style.display = 'none';
+			} 
+		}
+
+	} else {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			select_3way_opt.options[i].style.display = 'block';
+		}
+	}
+
+})
+cb_gluten.addEventListener("change", function() {
+
+	if (cb_gluten.checked) {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			if (select_3way_opt.options[i].getAttribute("gluten") == "false") {
+				select_3way_opt.options[i].style.display = 'none';
+			} 
+		}
+
+	} else {
+		for (var i = 0; i < select_3way_opt.options.length; i++) {
+			select_3way_opt.options[i].style.display = 'block';
+		}
+	}
+
+})

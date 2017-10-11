@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Order form</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+				<form>
+					<div class="form-row">
+
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-secondary active">
+								<input type="radio" name="options" id="option-private" autocomplete="off" checked>Privatus asmuo
+							</label>
+							<label class="btn btn-secondary">
+								<input type="radio" name="options" id="option-business" autocomplete="off"> Imone
+							</label>
+
+						</div>
+
+					</div>
+					<div class="form-row">
+
+						<div class="form-group">
+							<label for="inputName" class="col-form-label">Vardas</label>
+							<input type="text" class="form-control" id="inputName" onkeyup="checkIfNotEmpty(inputName)" placeholder="Vardas">
+						</div>
+
+						<div class="form-group">
+							<label for="inputLastName" class="col-form-label">Pavarde</label>
+							<input type="text" class="form-control" id="inputLastName" onkeyup="checkIfNotEmpty(inputLastName)" placeholder="Pavarde">
+						</div>
+					</div>
+					<div id="business-part">
+						<div class="form-row">
+							<div class="form-group col-6">
+								<label for="inputBusinessName" class="col-form-label">Imones pavadinimas</label>
+								<input type="text" class="form-control" id="inputBusinessName" onkeyup="checkIfNotEmpty(inputBusinessName)" placeholder="Imones pavadinimas">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group">
+								<label for="inputBusinessCode" class="col-form-label">Imones kodas</label>
+								<input type="text" class="form-control" id="inputBusinessCode" onkeyup="checkIfNotEmpty(inputBusinessCode)" placeholder="Imones kodas">
+							</div>
+							<div class="form-group">
+								<label for="inputPVMCode" class="col-form-label">PVM kodas</label>
+								<input type="text" class="form-control" id="inputPVMCode" placeholder="PVM kodas">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group">
+							<label for="inputEmail" class="col-form-label">Email</label>
+							<input type="email" class="form-control" id="inputEmail" onkeyup="checkIfValidEmail(inputEmail)" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="inputAddress" class="col-form-label">Adresas</label>
+							<input type="text" class="form-control" id="inputAddress" placeholder="Enter a location">
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group">
+							<label for="inputCity" class="col-form-label">Miestas</label>
+							<input type="text" class="form-control" id="inputCity">
+						</div>
+						<div class="form-group">
+							<label for="inputState" class="col-form-label">Rajonas</label>
+							<select id="inputState" class="form-control">Pasirinkti</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="inputZip" class="col-form-label">Pasto kodas</label>
+							<input type="text" class="form-control" id="inputZip">
+						</div>
+						<div class="form-group ">
+							<label for="inputCountry" class="col-form-label">Salis</label>
+							<select id="inputCountry" class="form-control">Pasirinkti</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-6">
+							<label for="inputPhone" class="col-form-label">Telefonas</label>
+							<input type="text" class="form-control" id="inputPhone">
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Testi</button>
+				</form>
+
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" name="delivery" id="radio_shop" value="option1" checked>
+						Pristatymas į tą patį adresą arba atsiėmimas parduotuvėje
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" name="delivery" id="radio_address" value="option2">
+						Siųsti prekes kitu adresu
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" id="delivery-part">
+			<form>
+
+				<div class="form-row">
+
+					<div class="form-group">
+						<label for="inputName-d" class="col-form-label">Vardas</label>
+						<input type="text" class="form-control" id="inputName-d" placeholder="Vardas">
+					</div>
+
+					<div class="form-group">
+						<label for="inputLastName-d" class="col-form-label">Pavarde</label>
+						<input type="text" class="form-control" id="inputLastName-d" placeholder="Pavarde">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label for="inputEmail-d" class="col-form-label">Email</label>
+						<input type="email" class="form-control" id="inputEmail-d" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="inputAddress-d" class="col-form-label">Adresas</label>
+						<input type="text" class="form-control" id="inputAddress-d" placeholder="Enter a location">
+					</div>
+				</div>
+			</div>
+
+		</div>			
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
+
+	<script src="js/script.js"></script>
+</body>
+</html>
