@@ -41,6 +41,7 @@ function Circle(x, y, dx, dy, r) {
 		}
 
 		if (this.y + this.r >= innerHeight || this.y - this.r <= 0) {
+			debugger;
 			this.dy = -this.dy;
 		} 
 
@@ -80,7 +81,7 @@ for (let i = 0; i < 20; i++) {
 	let dy = (Math.random() - 0.5) * 2;
 	let radius = (Math.random() * (maxRadius - minRadius)) + minRadius;
 
-	circleArray.push(new Circle(x,y,dx,dy,radius));
+	circleArray.push(new Circle(x, y, dx, dy, radius));
 }
 
 // let box = new Box(200,200,100,100);

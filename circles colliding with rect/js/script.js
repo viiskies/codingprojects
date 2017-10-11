@@ -128,7 +128,7 @@ for (var i = 0; i < 20; i++) {
 	circleArray.push(new Circle(x,y,dx,dy,radiusN));
 }
 
-var box = new Box(200,200,200,200);
+var box = new Box(50,200,innerWidth-50,20);
 
 function animate() {
 	requestAnimationFrame(animate);

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss"
+	],
+	"sourcesContent": [
+		"$black : #3b3b3b;\r\n$green : #3fe5c0;\r\n$light-grey : #fafafa;\r\n$grey : #ededed;\r\n\r\n// // Extra small devices (portrait phones, less than 576px)\r\n// @media (max-width: 575px) { }\r\n\r\n// // Small devices (landscape phones, 576px and up)\r\n// @media (min-width: 576px) and (max-width: 767px) {  }\r\n\r\n// Medium devices (tablets, 768px and up)\r\n.nav-link.active a, .nav-pills {\r\n\tbackground-color: $green !important;\r\n}\r\n\r\n.nav-item a {\r\n\tcolor: $green;\r\n}\r\n\r\n.bg-success, .btn-success {\r\n\r\n\tbackground-color: $green !important;\r\n\tborder: none;\r\n}\r\n.navbar-toggler-icon {\r\n\tfill: red !important;\r\n}\r\n@media (min-width: 768px) and (max-width: 991px) { \r\n\t.nav-item a {\r\n\t\tfont-size: 14px;\r\n\t}\r\n\r\n}\r\n\r\n// // Large devices (desktops, 992px and up)\r\n// @media (min-width: 992px) and (max-width: 1199px) { }\r\n\r\n// // Extra large devices (large desktops, 1200px and up)\r\n// @media (min-width: 1200px) {  }\r\n\r\n"
+	],
+	"mappings": ";AAYA,AAAiB,SAAR,AAAA,OAAO,CAAC,CAAC,EAAE,AAAA,UAAU,CAAC;EAC9B,gBAAgB,EAZR,OAAO,CAYU,UAAU;CACnC;;;AAED,AAAU,SAAD,CAAC,CAAC,CAAC;EACX,KAAK,EAhBG,OAAO;CAiBf;;;AAED,AAAA,WAAW,EAAE,AAAA,YAAY,CAAC;EAEzB,gBAAgB,EArBR,OAAO,CAqBU,UAAU;EACnC,MAAM,EAAE,IAAK;CACb;;;AACD,AAAA,oBAAoB,CAAC;EACpB,IAAI,EAAE,cAAe;CACrB;;AACD,MAAM,EAAL,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,KAAK;;EACvC,AAAU,SAAD,CAAC,CAAC,CAAC;IACX,SAAS,EAAE,IAAK;GAChB",
+	"names": []
+}
