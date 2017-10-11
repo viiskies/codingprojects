@@ -67,5 +67,9 @@ function checkIfNotEmpty(inputas) {
 
 function checkIfValidEmail(inputas) {
 	var inputtedEmail = document.getElementById(inputas.id).value;
-	console.log(inputtedEmail);
+	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if (inputtedEmail.search(emailRegex) != -1) {
+		console.log("form is valid");
+
+	}
 }

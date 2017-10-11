@@ -69,59 +69,75 @@ var cb_halal = document.getElementById("halal");
 var cb_koser = document.getElementById("koser");
 var cb_gluten = document.getElementById("gluten");
 
-// cb_halal.checked = true;
-// cb_koser.checked = true;
-// cb_gluten.checked = true;
+cb_halal.checked = true;
+cb_koser.checked = true;
+cb_gluten.checked = true;
 
-var select_3way_opt = document.getElementById("3way-opt");
-
+var checkedList = ["halal", "koser", "gluten"];
 
 cb_halal.addEventListener("change", function() {
-
+	var index;
 	if (cb_halal.checked) {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			if (select_3way_opt.options[i].getAttribute("halal") == "false") {
-				select_3way_opt.options[i].style.display = 'none';
-			} 
-		}
-
+		checkedList.push("halal");
 	} else {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			select_3way_opt.options[i].style.display = 'block';
-		}
+		index1 = checkedList.indexOf("halal");
+		checkedList.splice(index, 1);
 	}
+	showOrHide();
 
 })
 
 cb_koser.addEventListener("change", function() {
-
+	var index;
 	if (cb_koser.checked) {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			if (select_3way_opt.options[i].getAttribute("koser") == "false") {
-				select_3way_opt.options[i].style.display = 'none';
-			} 
-		}
-
+		checkedList.push("koser");
 	} else {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			select_3way_opt.options[i].style.display = 'block';
-		}
+		index = checkedList.indexOf("koser");
+		checkedList.splice(index, 1);
 	}
+	showOrHide();
 
 })
+
 cb_gluten.addEventListener("change", function() {
-
+	var index;
 	if (cb_gluten.checked) {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			if (select_3way_opt.options[i].getAttribute("gluten") == "false") {
-				select_3way_opt.options[i].style.display = 'none';
-			} 
-		}
-
+		checkedList.push("gluten");
 	} else {
-		for (var i = 0; i < select_3way_opt.options.length; i++) {
-			select_3way_opt.options[i].style.display = 'block';
-		}
+		index = checkedList.indexOf("gluten");
+		checkedList.splice(index, 1);
 	}
+	showOrHide();
 
 })
+
+var select_3way_opt = document.getElementById("3way-opt").options;
+
+
+function showOrHide() {
+	let lastAdded = false;
+
+	//going through options
+	for (let i = 0; i < select_3way_opt.length; i++) {
+		lastAdded = false;
+
+		// going through checked items
+		for (let j = 0; j < checkedList.length; j++) {
+
+			//if currennt option should be shown
+			if (select_3way_opt[i].getAttribute(checkedList[j]) == "true") {
+				select_3way_opt[i].style.display = 'block';
+				lastAdded = true;
+				break;
+			}
+		}
+		if (lastAdded == false) {
+			select_3way_opt[i].style.display = 'none';
+		}
+
+
+	}
+
+}
+
+
