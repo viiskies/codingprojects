@@ -51,25 +51,80 @@ cb_radio_address.addEventListener("change", function() {
 })
 
 
+var problemsWithForm = [];
 
-
+document.getElementById("option-private");
 
 var txt_inputName = document.getElementById("inputName");
 
-function checkIfNotEmpty(inputas) {
-	if (inputas.value == '') {
-		document.getElementById(inputas.id).style.backgroundColor = "red";
+function checkIfNotEmpty(inputas, minLen = 3) {
+	var index;
+	if (inputas.value.length < minLen) {
+		document.getElementById(inputas.id).style.borderColor = "red";
+		if (problemsWithForm.indexOf(inputas.id) == -1){
+			problemsWithForm.push(inputas.id);
+		};
 	} else {
-		document.getElementById(inputas.id).style.backgroundColor = "green";
+		document.getElementById(inputas.id).style.borderColor = "initial";
+		index = problemsWithForm.indexOf(inputas.id);
+		problemsWithForm.splice(index, 1);
 	}
+
+	console.log(problemsWithForm);
+	showErrors();
 
 }
 
 function checkIfValidEmail(inputas) {
+	var index;
 	var inputtedEmail = document.getElementById(inputas.id).value;
 	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	if (inputtedEmail.search(emailRegex) != -1) {
-		console.log("form is valid");
-
+	if (inputtedEmail.search(emailRegex) == -1) {
+		document.getElementById(inputas.id).style.borderColor = "red";
+		if (problemsWithForm.indexOf(inputas.id) == -1){
+			problemsWithForm.push(inputas.id);
+		};
+	} else {
+		document.getElementById(inputas.id).style.borderColor = "initial";
+		index = problemsWithForm.indexOf(inputas.id);
+		problemsWithForm.splice(index, 1);
 	}
+
+	console.log(problemsWithForm);
+	showErrors();
+}
+
+function checkPassword(inputas) {
+	checkIfNotEmpty(inputas, 8);
+	if(document.getElementById(inputPass.id).value != "" && document.getElementById(inputPassAgain.id).value != ""){
+
+		if(document.getElementById(inputPass.id).value != document.getElementById(inputPassAgain.id).value) {
+			document.getElementById(inputPass.id).style.borderColor = "red";
+			document.getElementById(inputPassAgain.id).style.borderColor = "red";
+		} else {
+			document.getElementById(inputPass.id).style.borderColor = "green";
+			document.getElementById(inputPassAgain.id).style.borderColor = "green";
+		}
+	}
+
+
+}
+
+
+var errorbox = document.getElementById("errorbox");
+errorbox.style.display = 'none';
+
+
+function showErrors() {
+	var problemsHTML = "";
+	if (problemsWithForm.length > 0) {
+		for (var i = 0; i < problemsWithForm.length; i++) {
+			problemsHTML += "<p>" + problemsWithForm[i] + "</p>";
+		}
+		errorbox.innerHTML = problemsHTML;
+		errorbox.style.display = 'block';
+	} else {
+		errorbox.style.display = 'none';
+	}
+	
 }

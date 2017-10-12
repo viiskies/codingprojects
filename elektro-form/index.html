@@ -18,6 +18,13 @@
 		<div class="row">
 			<div class="col-8">
 				<form>
+					<div class="row" id="errorbox">
+
+						<div class="col">
+							<p>hello</p>
+						</div>
+
+					</div>
 					<div class="form-row">
 
 						<div class="btn-group" data-toggle="buttons">
@@ -86,6 +93,16 @@
 					</div>
 					<div class="form-row">
 						<div class="form-group">
+							<label for="inputPass" class="col-form-label">Slaptazodis</label>
+							<input type="text" class="form-control" id="inputPass" onkeyup="checkPassword(inputPass)">
+						</div>
+						<div class="form-group">
+							<label for="inputPassAgain" class="col-form-label">Slaptazodis dar karta</label>
+							<input type="text" class="form-control" id="inputPassAgain" onkeyup="checkPassword(inputPassAgain)">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
 							<label for="inputZip" class="col-form-label">Pasto kodas</label>
 							<input type="text" class="form-control" id="inputZip">
 						</div>
@@ -144,7 +161,7 @@
 				<div class="form-row">
 					<div class="form-group">
 						<label for="inputEmail-d" class="col-form-label">Email</label>
-						<input type="email" class="form-control" id="inputEmail-d" placeholder="Email">
+						<input type="email" class="form-control" id="inputEmail-d" onkeyup="checkIfValidEmail(inputEmail-d)"placeholder="Email">
 					</div>
 					<div class="form-group">
 						<label for="inputAddress-d" class="col-form-label">Adresas</label>

@@ -29,9 +29,6 @@ salads.addEventListener("change", function() {
 	}
 })
 
-// console.log(inputSoup.options);
-
-
 vegan.addEventListener("change", function() {
 
 	if (vegan.checked) {
@@ -141,3 +138,5 @@ function showOrHide() {
 }
 
 
+var errorbox = document.getElementById("errorbox");
+console.log(errorbox);
