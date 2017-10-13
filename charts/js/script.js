@@ -1,44 +1,26 @@
 var ctx = document.getElementById("myChart").getContext('2d');
 
+
 var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    datasets: [{
-        yAxisID: 'first-y-axis',
-        label: 'Amzius',
-        data: [10, 20, 30, 40],
-        backgroundColor: [ 'rgba(255, 99, 132, 0.2)']
-    }, 
-    {
-        yAxisID: 'second-y-axis',
-        label: 'Alga',
-        data: [50, 50, 50, 50],
-        backgroundColor: [],
+    type: 'pie',
+    data: {
+        labels: ["Red"],
+        datasets: [{
+            label: '# of Votes',
+            data: [3],
+            backgroundColor: [
 
-          // Changes this dataset to become a line
-          type: 'bar'
-      }],
-      labels: ['January', 'February', 'March', 'April']
-  },
-  options: {
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
 
-      scales: {
-        yAxes: [{
-            id: 'first-y-axis',
-            type: 'linear',
-            ticks: {
-                    beginAtZero:true
-                }
-        }, {
-            id: 'second-y-axis',
-            type: 'linear',
-            ticks: {
-                    beginAtZero:true
-                }
+                'rgba(255, 159, 64, 1)'
+            ]
         }]
-    }
-}
+    },
+    options: {
 
+    }
 });
 clearData(myChart);
 
@@ -50,7 +32,7 @@ document.getElementById("add-new-data").addEventListener("click", function() {
     var dataArray = [age, salary];
 
 
-    addData(myChart, name, dataArray);
+    addData(myChart, name, salary);
     // console.log(dataArray[1]);
 
 })
@@ -73,16 +55,16 @@ function addData(chart, label, data) {
     chart.data.datasets[0].data.push(data[0]);
     chart.data.datasets[0].backgroundColor.push('rgba(255, 99, 132, 0.2)');
     
-    chart.data.datasets[1].data.push(data[1]);
+    // chart.data.datasets[1].data.push(data[1]);
     
-    if ((data[1]) > 500) {
-        chart.data.datasets[1].backgroundColor.push('green');
-        console.log('more than 500');
-    } else {
-       chart.data.datasets[1].backgroundColor.push('red');
-    }
+ //    if ((data[1]) > 500) {
+ //        chart.data.datasets[1].backgroundColor.push('green');
+ //        console.log('more than 500');
+ //    } else {
+ //     chart.data.datasets[1].backgroundColor.push('red');
+ // }
 
-    chart.update();
+ chart.update();
 
 }
 
