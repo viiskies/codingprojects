@@ -107,6 +107,7 @@ function Box(x, y, w, h) {
 		this.y += dy;
 		this.draw();
 	}
+	
 	this.draw = function() {
 		c.beginPath();
 		c.rect(this.x, this.y, this.w, this.h);
